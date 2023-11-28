@@ -49,7 +49,7 @@ export const WebSocketDemo = () => {
           <span key={idx}>{message ? message.data : null}</span>
         ))}
       </ul> */}
-      <div style={{display:"flex", justifyContent:"space-evenly"}}>
+      <div style={{display:"flex", justifyContent:"space-evenly", marginTop:"30px"}}>
       <h4><span style={{border:"10px solid blue",  height:"10px"}}></span> Nifty</h4>
       <h4><span style={{border:"10px solid cyan", }}></span> Banknifty</h4>
       <h4><span style={{border:"10px solid purple", }}></span> Finnifty</h4>

@@ -6,6 +6,7 @@ const ApexCharts = () => {
  
     const [socketUrl, setSocketUrl] = useState('wss://functionup.fintarget.in/ws?id=fintarget-functionup');
     const [messageHistory, setMessageHistory] = useState([]);
+    
 
     const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl)
 
@@ -13,12 +14,12 @@ const ApexCharts = () => {
 
     useEffect(() => {
         if (lastMessage !== null) {
-          setMessageHistory((prev) => prev.concat(socketUrl));
+          setMessageHistory((prev) => prev.concat(readyState));
         }
       }, [lastMessage, setMessageHistory]);
 
   const generateRandomData = () => {
-    const dataPoints = Array.from({ length: 30 }, (_, i) => ({
+    const dataPoints = Array.from({ length: 80 }, (_, i) => ({
       x: new Date().getTime() + i * 100,
       y: [
         Math.random() * 10,
@@ -39,7 +40,7 @@ const ApexCharts = () => {
   const chartOptions = {
     chart: {
       type: 'candlestick',
-      height: 350,
+      height: 10,
     },
     title: {
       text: '',

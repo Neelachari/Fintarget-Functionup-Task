@@ -27,7 +27,7 @@ function Navbar() {
     <div >
      
      {[ltpData]?.map((el)=>{
-      return <div style={{display:"flex", margin:"auto", justifyContent:"space-evenly", border:"2px solid gray"}} >
+      return <div  style={{display:"flex", margin:"auto", justifyContent:"space-around", border:"2px solid gray", height:"50px", textAlign:"center"}} >
          <h4>Stock Prices</h4>
           <p > <spam style={{color:"red"}}> Nifty :</spam>{el.Nifty}</p>
           <p > <spam style={{color:"red"}}>Banknifty:</spam>  {el.Banknifty}</p>
